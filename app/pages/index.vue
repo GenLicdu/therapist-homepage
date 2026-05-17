@@ -126,7 +126,7 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
 <template>
   <main class="min-h-screen bg-[#f7f3ec] text-stone-800 antialiased">
     <header class="fixed left-0 right-0 top-0 z-50 border-b border-stone-200/70 bg-[#f7f3ec]/90 backdrop-blur-md">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-6">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
         <a href="#" class="text-base font-medium tracking-wide text-stone-900">
           石婷 Sting
         </a>
@@ -140,52 +140,61 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
           <a href="#contact" class="transition hover:text-stone-900">预约咨询</a>
         </nav>
       </div>
+
+      <nav class="scrollbar-none flex gap-5 overflow-x-auto border-t border-stone-200/60 px-4 py-2 text-sm text-stone-500 md:hidden">
+        <a href="#about" class="shrink-0">专业背景</a>
+        <a href="#services" class="shrink-0">咨询方向</a>
+        <a href="#training" class="shrink-0">受训经历</a>
+        <a href="#experience" class="shrink-0">职业路径</a>
+        <NuxtLink to="/activities" class="shrink-0">活动成果</NuxtLink>
+        <a href="#contact" class="shrink-0">预约咨询</a>
+      </nav>
     </header>
 
-    <section class="relative overflow-hidden pt-16 md:pt-20">
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-36 border-b border-stone-200 bg-[#edf0e9] md:h-40"></div>
+    <section class="relative overflow-hidden pt-24 md:pt-20">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-32 border-b border-stone-200 bg-[#edf0e9] md:h-40"></div>
 
-      <div class="reveal relative mx-auto grid max-w-6xl items-start gap-10 px-5 py-8 md:grid-cols-[1.05fr_0.95fr] md:px-6 md:py-12">
+      <div class="reveal relative mx-auto grid max-w-6xl items-start gap-9 px-4 py-7 md:grid-cols-[1.05fr_0.95fr] md:px-6 md:py-12">
         <div>
-          <p class="mb-5 text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-[#a47c2b] md:mb-5 md:tracking-[0.28em]">
             Psychological Counseling
           </p>
 
-          <h1 class="max-w-3xl text-4xl font-light leading-[1.18] text-stone-900 md:text-6xl">
+          <h1 class="max-w-3xl text-[2.35rem] font-light leading-[1.18] text-stone-900 md:text-6xl">
             在关系、情绪与自我之间，陪你慢慢看见内心的需要
           </h1>
 
-          <p class="mt-7 max-w-2xl text-lg leading-8 text-stone-600">
+          <p class="mt-6 max-w-2xl text-base leading-8 text-stone-600 md:mt-7 md:text-lg">
             注册系统心理咨询师，多伦多正念研究中心 MBCT 受训背景。面向成人、青少年与家庭关系议题，提供个体咨询、正念减压与团体心理支持。
           </p>
 
-          <div class="mt-9 grid max-w-2xl grid-cols-3 border-y border-stone-300/80">
+          <div class="mt-7 grid max-w-2xl grid-cols-3 border-y border-stone-300/80 md:mt-9">
             <div
               v-for="item in credentials"
               :key="item.label"
-              class="border-r border-stone-300/80 py-5 last:border-r-0"
+              class="border-r border-stone-300/80 px-2 py-4 last:border-r-0 md:px-0 md:py-5"
             >
-              <p class="text-2xl font-light text-stone-900 md:text-3xl">{{ item.value }}</p>
+              <p class="text-xl font-light text-stone-900 md:text-3xl">{{ item.value }}</p>
               <p class="mt-1 text-xs leading-5 text-stone-500 md:text-sm">{{ item.label }}</p>
             </div>
           </div>
 
-          <div class="mt-9 flex flex-wrap gap-3">
+          <div class="mt-7 grid gap-3 sm:flex sm:flex-wrap md:mt-9">
             <a
               href="#contact"
-              class="rounded-full bg-[#26332f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-stone-900"
+              class="rounded-full bg-[#26332f] px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:bg-stone-900"
             >
               预约咨询
             </a>
             <a
               href="#about"
-              class="rounded-full border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 transition hover:border-stone-500 hover:bg-white"
+              class="rounded-full border border-stone-300 px-6 py-3 text-center text-sm font-medium text-stone-700 transition hover:border-stone-500 hover:bg-white"
             >
               查看专业背景
             </a>
             <NuxtLink
               to="/activities"
-              class="rounded-full border border-[#5f766f]/40 px-6 py-3 text-sm font-medium text-[#26332f] transition hover:border-[#5f766f] hover:bg-[#edf0e9]"
+              class="rounded-full border border-[#5f766f]/40 px-6 py-3 text-center text-sm font-medium text-[#26332f] transition hover:border-[#5f766f] hover:bg-[#edf0e9]"
             >
               活动与成果
             </NuxtLink>
@@ -193,7 +202,7 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
         </div>
 
         <div class="mx-auto w-full max-w-md md:max-w-none">
-          <div class="aspect-[4/5] overflow-hidden rounded-lg border-[10px] border-white bg-stone-200 shadow-[0_28px_80px_rgba(68,64,60,0.18)]">
+          <div class="aspect-[4/5] max-h-[560px] overflow-hidden rounded-lg border-[8px] border-white bg-stone-200 shadow-[0_28px_80px_rgba(68,64,60,0.18)] md:border-[10px]">
             <img
               src="/images/profile.jpg"
               alt="石婷个人照片"
@@ -205,7 +214,7 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
             <div
               v-for="[label, value] in profileNotes"
               :key="label"
-              class="grid grid-cols-[5rem_1fr] gap-4 border-b border-stone-200 px-5 py-4 text-sm last:border-b-0"
+              class="grid gap-1 border-b border-stone-200 px-4 py-3 text-sm last:border-b-0 sm:grid-cols-[5rem_1fr] sm:gap-4 md:px-5 md:py-4"
             >
               <p class="text-stone-400">{{ label }}</p>
               <p class="leading-6 text-stone-700">{{ value }}</p>
@@ -215,8 +224,8 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
       </div>
     </section>
 
-    <section id="about" class="reveal border-t border-stone-200 py-24 md:py-28">
-      <div class="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[0.75fr_1.25fr] md:px-6">
+    <section id="about" class="reveal border-t border-stone-200 py-16 md:py-28">
+      <div class="mx-auto grid max-w-6xl gap-9 px-4 md:grid-cols-[0.75fr_1.25fr] md:gap-12 md:px-6">
         <div>
           <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">About</p>
           <h2 class="mt-5 text-3xl font-light leading-tight text-stone-900 md:text-5xl">
@@ -261,8 +270,8 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
       </div>
     </section>
 
-    <section id="services" class="reveal bg-[#e9e4db] py-24 md:py-28">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="services" class="reveal bg-[#e9e4db] py-16 md:py-28">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <div class="mb-12 max-w-3xl">
           <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Services</p>
           <h2 class="mt-5 text-3xl font-light text-stone-900 md:text-5xl">咨询与支持方向</h2>
@@ -290,8 +299,8 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
       </div>
     </section>
 
-    <section id="training" class="reveal py-24 md:py-28">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="training" class="reveal py-16 md:py-28">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <div class="mb-12 grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
           <div>
             <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Training</p>
@@ -318,8 +327,8 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
       </div>
     </section>
 
-    <section id="experience" class="reveal bg-white py-24 md:py-28">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="experience" class="reveal bg-white py-16 md:py-28">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <div class="mb-12 grid gap-6 md:grid-cols-[0.95fr_1.05fr] md:items-end">
           <div>
             <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Experience</p>
@@ -336,7 +345,7 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
           <article
             v-for="(item, index) in experience"
             :key="`${item.place}-${item.date}`"
-            class="relative grid gap-5 border-b border-stone-200 pb-8 pl-8 pt-8 first:pt-0 last:border-b-0 md:grid-cols-[10rem_1fr] md:gap-10"
+            class="relative grid gap-4 border-b border-stone-200 pb-7 pl-5 pt-7 first:pt-0 last:border-b-0 md:grid-cols-[10rem_1fr] md:gap-10 md:pl-8 md:pt-8"
           >
             <span class="absolute -left-[5px] top-9 h-2.5 w-2.5 rounded-full border-2 border-white bg-[#5f766f] shadow-sm"></span>
             <div>
@@ -345,7 +354,7 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
               </p>
               <p class="mt-3 text-sm leading-6 text-stone-500">{{ item.date }}</p>
             </div>
-            <div class="border border-stone-200 bg-[#fbfaf7] p-6 transition duration-300 hover:border-stone-300 hover:bg-white">
+            <div class="border border-stone-200 bg-[#fbfaf7] p-5 transition duration-300 hover:border-stone-300 hover:bg-white md:p-6">
               <h3 class="text-xl font-medium text-stone-900">{{ item.place }}</h3>
               <p class="mt-2 text-sm text-[#5f766f]">{{ item.role }}</p>
               <p class="mt-5 leading-7 text-stone-600">{{ item.desc }}</p>
@@ -355,8 +364,8 @@ const contactIssues = ['情绪压力', '关系困扰', '亲子沟通', '青少�
       </div>
     </section>
 
-    <section id="contact" class="reveal bg-[#202a27] py-24 text-white md:py-28">
-      <div class="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[1fr_0.9fr] md:px-6">
+    <section id="contact" class="reveal bg-[#202a27] py-16 text-white md:py-28">
+      <div class="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1fr_0.9fr] md:gap-12 md:px-6">
         <div>
           <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#d0a54a]">Contact</p>
           <h2 class="mt-5 max-w-2xl text-3xl font-light leading-tight md:text-5xl">

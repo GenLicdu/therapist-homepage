@@ -43,30 +43,30 @@ const maintainNotes = [
 <template>
   <main class="min-h-screen bg-[#f7f3ec] text-stone-800 antialiased">
     <header class="sticky top-0 z-50 border-b border-stone-200/70 bg-[#f7f3ec]/90 backdrop-blur-md">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-6">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
         <NuxtLink to="/" class="text-base font-medium tracking-wide text-stone-900">
           石婷 Sting
         </NuxtLink>
 
-        <nav class="flex items-center gap-5 text-sm text-stone-500 md:gap-7">
+        <nav class="scrollbar-none flex max-w-[62vw] items-center gap-5 overflow-x-auto text-sm text-stone-500 md:max-w-none md:gap-7">
           <NuxtLink to="/" class="transition hover:text-stone-900">首页</NuxtLink>
-          <a href="#featured" class="transition hover:text-stone-900">精选活动</a>
-          <a href="#archive" class="transition hover:text-stone-900">成果归档</a>
+          <a href="#featured" class="shrink-0 transition hover:text-stone-900">精选活动</a>
+          <a href="#archive" class="shrink-0 transition hover:text-stone-900">成果归档</a>
         </nav>
       </div>
     </header>
 
     <section class="border-b border-stone-200 bg-[#edf0e9]">
-      <div class="reveal mx-auto grid max-w-6xl gap-8 px-5 py-14 md:grid-cols-[0.95fr_1.05fr] md:px-6 md:py-16">
+      <div class="reveal mx-auto grid max-w-6xl gap-7 px-4 py-12 md:grid-cols-[0.95fr_1.05fr] md:px-6 md:py-16">
         <div>
-          <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Activities</p>
-          <h1 class="mt-5 max-w-3xl text-4xl font-light leading-tight text-stone-900 md:text-6xl">
+          <p class="text-xs font-medium uppercase tracking-[0.22em] text-[#a47c2b] md:tracking-[0.28em]">Activities</p>
+          <h1 class="mt-5 max-w-3xl text-[2.35rem] font-light leading-tight text-stone-900 md:text-6xl">
             活动经历与成果展示
           </h1>
         </div>
 
         <div class="self-end">
-          <p class="max-w-2xl text-lg leading-8 text-stone-600">
+          <p class="max-w-2xl text-base leading-8 text-stone-600 md:text-lg">
             这里用于展示讲座、团体辅导、正念课程、学校项目与论文成果。后续有真实照片或 PDF 时，可以逐步替换当前的活动卡片。
           </p>
           <div class="mt-7 flex flex-wrap gap-2">
@@ -79,8 +79,8 @@ const maintainNotes = [
       </div>
     </section>
 
-    <section id="featured" class="reveal py-20 md:py-24">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="featured" class="reveal py-16 md:py-24">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <div class="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Featured</p>
@@ -106,7 +106,7 @@ const maintainNotes = [
               </div>
             </div>
 
-            <div class="p-6">
+            <div class="p-5 md:p-6">
               <div class="flex flex-wrap gap-2 text-sm">
                 <span class="bg-[#edf0e9] px-3 py-1.5 text-[#5f766f]">{{ activity.category }}</span>
                 <span class="px-1.5 py-1.5 text-stone-400">{{ activity.date }}</span>
@@ -131,8 +131,8 @@ const maintainNotes = [
       </div>
     </section>
 
-    <section id="archive" class="reveal bg-[#e9e4db] py-20 md:py-24">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="archive" class="reveal bg-[#e9e4db] py-16 md:py-24">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <div class="mb-10 max-w-3xl">
           <p class="text-xs font-medium uppercase tracking-[0.28em] text-[#a47c2b]">Archive</p>
           <h2 class="mt-5 text-3xl font-light text-stone-900 md:text-5xl">成果归档方向</h2>
@@ -151,8 +151,8 @@ const maintainNotes = [
       </div>
     </section>
 
-    <section class="reveal py-14">
-      <div class="mx-auto max-w-6xl px-5 md:px-6">
+    <section class="reveal py-12 md:py-14">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
         <details class="border border-stone-200 bg-white p-5">
           <summary class="cursor-pointer text-sm font-medium text-stone-700">
             维护提示：后续素材放置位置
